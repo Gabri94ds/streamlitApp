@@ -40,6 +40,8 @@ query = '''
 filtro_dados = df.query(query)
 filtro_dados = filtro_dados[colunas]
 
+st.dataframe(filtro_dados)
+
 st.markdown(f'A tabela possui :blue[{filtro_dados.shape[0]}] linhas e :blue[{filtro_dados.shape[1]}] colunas')
 
 st.markdown('Escreva um nome do arquivo')
@@ -59,5 +61,3 @@ with coluna2:
         mime = 'text/csv',
         on_click = mensagem_sucesso()
     )
-
-st.dataframe(filtro_dados)
