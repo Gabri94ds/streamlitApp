@@ -1,6 +1,6 @@
 import streamlit as st
 from dataset import df
-from estudos.Python.streamlit.pages.utils import convert_csv, mensagem_sucesso
+from utils import convert_csv, mensagem_sucesso
 
 st.title('Dataset de Vendas')
 with st.expander('colunas'):
