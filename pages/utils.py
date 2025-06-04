@@ -21,7 +21,7 @@ df_rec_estado = df.drop_duplicates(subset='Local da compra')[['Local da compra',
 
 #dataframe receita mensal
 
-df_rec_mensal = df.set_index('Data da Compra').groupby(pd.Grouper(freq='M'))['Preço'].sum().reset_index()
+df_rec_mensal = df.set_index('Data da Compra').groupby(pd.Grouper(freq='ME'))['Preço'].sum().reset_index()
 df_rec_mensal['Ano'] = df_rec_mensal['Data da Compra'].dt.year
 df_rec_mensal['Mes'] = df_rec_mensal['Data da Compra'].dt.month_name()
 
